@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informações</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ng-container *ngIf="posterPath; else skeleton">
+      <img [src]="'https://image.tmdb.org/t/p/original/' + posterPath" class="swiper-lazy" alt="{{ title }}">
+    </ng-container>
+    <ng-template #skeleton>
+      <ion-skeleton-text class="skeleton-image"></ion-skeleton-text>
+    </ng-template>
+    <ion-card-header>
+      <ion-card-title>{{ title }}</ion-card-title>
+      <ion-card-subtitle><strong>{{ genres }}</strong></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p id="synopsis">{{ synopsis || 'Este filme é muito recente, portanto, não possui sinópse no momento.' }}</p>
+      <ion-card id="infoCard">
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="6">
+              <ion-icon name="star" class="catIcon"></ion-icon>
+              <strong> Popularidade:</strong>
+            </ion-col>
+            <ion-col size="6" class="ion-text-end">
+              {{ popularity || 'Null' }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-icon name="star-half" class="catIcon"></ion-icon>
+              <strong> Média de votos:</strong>
+            </ion-col>
+            <ion-col size="6" class="ion-text-end">
+              {{ voteAverage || 'Null' }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-icon name="thumbs-up" class="catIcon"></ion-icon>
+              <strong> Contagem de votos:</strong>
+            </ion-col>
+            <ion-col size="6" class="ion-text-end">
+              {{ voteCount || 'Null' }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-icon name="calendar" class="catIcon"></ion-icon>
+              <strong> Data de lançamento:</strong>
+            </ion-col>
+            <ion-col size="6" class="ion-text-end">
+              {{ formatReleaseDate(releaseDate) || 'Null' }}
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <p class="ion-text-center ion-text-xs">Informações referentes aos dados da API.</p>
+      <ion-button expand="full" (click)="closeModal()" shape="round">Fechar</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-modal></ion-modal>
+</ion-content>

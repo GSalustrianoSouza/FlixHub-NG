@@ -1,0 +1,54 @@
+.cadastro-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#title {
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.images {
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.backbutton {
+    margin-right: 15px;
+    margin-top: 25px;
+    width: 11.5px;
+    height: 30px;
+}
+
+.logotwo {
+    padding: 10px;
+}
+
+
+.input-list ion-input.custom-input { /*Adicionei o "Custom-Input para poder Editar, pois não estava conseguindo*/
+    width: 312px;
+    height: 47px;
+    --border-radius: 5px; 
+    --background: gray;
+    margin-bottom: 40px;
+    color: #C4C4C4;
+    text-align: center;
+    font-weight: bold;
+  }
+
+.submit ion-button { 
+    display: inline-block;
+    justify-content: center;
+    margin: 10px;
+    width: 151px;
+    height: 45px;
+    font-weight: bolder;
+    --border-radius: 50px;
+    text-transform: uppercase;
+    color: #FFFF;
+    --background: linear-gradient(to bottom, #E11D48, #81001C);
+}

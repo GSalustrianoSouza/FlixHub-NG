@@ -1,0 +1,19 @@
+<div class="title">
+  <ion-icon name="trophy"></ion-icon>
+  <ion-label>Últimos Filmes</ion-label>
+</div>
+
+<swiper-container class="mySwiper" #swiperContainer pagination="false" space-between="15" slides-per-view="3.5">
+  <swiper-slide *ngFor="let movie of movies" (click)="openMovieModal(movie)">
+    <div class="gradientTitle">
+      <ion-text class="filmTitle">
+        {{ movie.title }}
+      </ion-text>
+    </div>
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="swiper-lazy" alt="{{ movie.title }}">
+    <div class="swiper-lazy-preloader"></div>
+  </swiper-slide>
+  <ion-modal></ion-modal>
+</swiper-container>
+
+

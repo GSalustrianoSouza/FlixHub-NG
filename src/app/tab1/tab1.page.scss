@@ -1,0 +1,193 @@
+
+#iconSearch {
+    font-size: 25px;
+    padding-right: 8px;
+}
+
+ion-menu::part(backdrop) {
+  background-color: rgba(61, 61, 61, 0.5);
+}
+
+ion-menu::part(container) {
+  border-radius: 0 5px 5px 0;
+
+  box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+ion-menu {
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    
+    ion-button {
+        padding: 10px;
+        margin-bottom: 15px;
+        --background: linear-gradient(90deg, rgba(225,29,72,1) 0%, rgba(123,16,39,1) 100%);
+        font-family: "Exo", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        height: 60px;
+
+        ion-icon {
+          margin-right: 5px;
+          margin-bottom: 3px;
+        }
+    }
+    ion-content {
+      ion-list {
+        background: none;
+        ion-list-header {
+          ion-label {
+            font-size: 18px;
+            color: transparent;
+            background: linear-gradient(90deg, rgba(225,29,72,1) 0%, rgba(123,16,39,1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-weight: 800;
+            font-family: "Exo", sans-serif;
+          }
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+        ion-item {
+          margin-left: 15px;
+  
+          ion-icon {
+            font-size: 18px;
+          }
+          ion-label {
+            font-size: 16px;
+            margin-left: 5px;
+            font-family: "Exo", sans-serif;
+          }
+        }
+
+        ion-item:hover {
+          cursor: pointer;
+          color: rgba(225,29,72,1);
+          -webkit-background-clip: text;
+          background-clip: text;
+          font-size: 16px;
+          margin-left: 25px;
+          font-family: "Exo", sans-serif;
+          
+          ion-icon {
+            color: rgba(225,29,72,1);
+          }
+        }
+
+      }
+    }
+}
+
+/* Estilo para os itens do menu */
+ion-menu ion-content#ionContentMenu ion-list ion-item {
+    --background: none;
+    border: none;
+}
+
+/* Estilo para a margem superior da barra de ferramentas do menu */
+ion-menu ion-header {
+    margin-top: 20px;
+}
+
+/* Estilo para a largura e o alinhamento da imagem do logo */
+ion-menu ion-header ion-toolbar ion-img#menuLogo {
+    width: 163px;
+    margin: 0 auto;
+}
+
+
+ion-header {
+  box-shadow: none;
+  
+  ion-toolbar {
+    box-shadow: none;
+    --background: linear-gradient(90deg, rgba(17,24,39,1) 0%, rgba(17,24,39,0) 40%, rgba(17,24,39,0) 60%, rgba(17,24,39,1) 100%);
+    }
+}
+
+ion-content {
+  ion-img {
+    margin-bottom: 40px;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 160px;
+  }
+  
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  swiper-slide img {
+    display: block;
+    width: 117px;
+    height: 160px;
+    object-fit: cover;
+  }
+}
+
+.topMovie {
+  background-size: 100px;
+  height: 300px; /* Ajuste conforme necessário */
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Torna o posicionamento absoluto em relação a este elemento */
+  color: white; /* Para melhor contraste */
+}
+
+.conteudoTopMovie {
+  position: absolute;
+  bottom: 0; /* Alinha a div na parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centraliza o texto */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Adiciona largura completa para centralizar corretamente */
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+ion-text {
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+}
+
+
+.conteudoTopMovie p,
+.conteudoTopMovie h3,
+.conteudoTopMovie ion-button {
+  margin:0 0 10px 0;
+  font-family: "Exo", sans-serif;
+}
+
+.conteudoTopMovie ion-button {
+  --background: linear-gradient(90deg, rgba(225,29,72,1) 0%, rgba(129,0,28,1) 100%);
+  width: 110px; /* Defina a largura desejada para o botão */
+  height: 20px;
+}
+
+img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+
+
+
+
+

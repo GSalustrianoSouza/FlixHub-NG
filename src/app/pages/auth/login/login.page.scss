@@ -1,0 +1,95 @@
+ion-content {
+    --background: #111827;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  
+  .login-container ion-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ajuste o layout para uma coluna */
+    width: 312px;
+    height: 17px;
+    border-radius: 50px;
+    --background: gray; 
+    color: #C4C4C4;
+    background-color: var(--background);  
+    margin-bottom: 30px; 
+  }
+  
+  
+  .login-container ion-button {
+    display: inline-block;
+    justify-content: center;
+    margin: 10px;
+    width: 151px;
+    height: 45px;
+    font-weight: bolder;
+    --border-radius: 50px;
+    text-transform: uppercase;
+    color: #FFFF;
+    --background: linear-gradient(to bottom, #E11D48, #81001C);
+  }
+  
+  
+  .login-container 
+  #buttontwo {
+    width: 151px;
+    height: 45px;
+    color: #E11D48;
+    --background: #FFFF;
+  }
+  
+  
+  .login-container .checkbox {
+    --border-radius: 4px;
+  }
+  
+  
+  .login-container 
+      .password {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+      }
+  
+  .login-container 
+      .iconsrede {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;   
+        padding: 15px;   
+      }
+      
+  .login-container {
+    .password{
+      #lostPass{
+        margin-left: 10px;
+      }
+    }
+    #footerText {
+      margin-top: 30px;
+      text-align: center;
+    }    
+  
+  }
+      
+      

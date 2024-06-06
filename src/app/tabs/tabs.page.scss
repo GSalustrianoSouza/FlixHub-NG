@@ -1,0 +1,26 @@
+
+ion-tab-bar {
+    border: none;
+    background-color: #040609;
+}
+
+ion-tab-button {
+    background: #040609;
+    transition: 0.3s ease-in-out;
+    
+    ion-label {
+        font-family: "Exo", sans-serif;
+        font-weight: 500;
+    }
+}
+
+.tab-selected {
+    ion-label, ion-icon {
+        font-weight: 700;
+        font-size: 14px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    border-top: 3px solid rgba(225,29,72,1); /* Adiciona uma borda branca de 2 pixels no topo */
+}
+

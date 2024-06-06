@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <div class="images">
+    <div class="backbutton" (click)="goBack()">
+      <img src="assets/backbutton.png" alt="Back Button">
+    </div>
+    <div class="logotwo">
+      <img src="assets/flixhub.png" alt="Logo FlixHub">
+    </div>
+  </div>
+  
+  <div class="cadastro-container">
+    <p id="title">Cadastro de Usuário</p>
+
+    <div class="input-list">
+      <form [formGroup]="regForm" novalidate>
+
+        <div *ngIf="regForm.get('name')?.touched && regForm.get('name')?.invalid">
+          <ion-text color="danger" *ngIf="errorControl['name'].errors?.['required']">
+            O nome deve ser preenchido corretamente.
+          </ion-text>
+        </div>
+
+        <ion-input type="text" formControlName="name" placeholder="Nome Completo" labelPlacement="stacked" name="name" class="custom-input"></ion-input>
+
+        <div *ngIf="regForm.get('email')?.touched && regForm.get('email')?.invalid">
+          <ion-text color="danger" *ngIf="errorControl['email'].errors?.['required']">
+            O Email é obrigatório!
+          </ion-text>
+          <ion-text color="danger" *ngIf="errorControl['email'].errors?.['pattern']">
+            Este formato de email é inválido!
+          </ion-text>
+        </div>
+
+        <ion-input type="email" formControlName="email" placeholder="Email" labelPlacement="stacked" name="email" class="custom-input"></ion-input>
+
+        <div *ngIf="regForm.get('password')?.touched && regForm.get('password')?.invalid">
+          <ion-text color="danger" *ngIf="errorControl['password'].errors?.['required']">
+            A senha é obrigatória!
+          </ion-text>
+          <ion-text color="danger" *ngIf="errorControl['password'].errors?.['pattern']">
+            A senha deve conter pelo menos <br>
+            Oito caracteres, <br>
+            Uma letra maiúscula, <br>
+            Um número.
+          </ion-text>
+        </div>
+
+        <ion-input type="password" formControlName="password" placeholder="Senha" labelPlacement="stacked" name="password" class="custom-input"></ion-input>
+      </form>
+    </div>
+  
+    <div class="submit">
+      <ion-button id="buttonsub" [disabled]="!regForm.valid" (click)="signUp()">Enviar</ion-button>
+    </div>
+
+    <p>Já tem uma conta? <a href="/login">Entrar</a></p>
+  </div>
+</ion-content>

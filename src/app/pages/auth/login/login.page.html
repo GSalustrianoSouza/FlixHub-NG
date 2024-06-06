@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true">
+  <div class="logo">
+    <img src="assets/group21.png" alt="Logo FlixHub">
+  </div>
+  <div class="login-container">  
+    <form [formGroup]="loginForm" novalidate>
+
+      <ion-input label="Email" formControlName="email" type="email" label-placement="floating" placeholder="Email"></ion-input>
+
+      <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+        <ion-text color="danger" *ngIf="errorControl['email'].errors?.['required']">
+          O Email é obrigatório!
+        </ion-text>
+        <ion-text color="danger" *ngIf="errorControl['email'].errors?.['pattern']">
+          Este formato de email é inválido!
+        </ion-text>
+      </div>
+
+      <ion-input label="Senha" formControlName="password" type="password" label-placement="floating" placeholder="Senha"></ion-input>
+
+      <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        <ion-text color="danger" *ngIf="errorControl['password'].errors?.['required']">
+          A senha é obrigatória!
+        </ion-text>
+        <ion-text color="danger" *ngIf="errorControl['password'].errors?.['pattern']">
+          A senha deve conter pelo menos <br>
+          Oito caracteres, <br>
+          Uma letra maiúscula, <br>
+          Um número.
+        </ion-text>
+      </div>
+
+    </form>
+    <div class="password">
+      <p id="lostPass"><a href="">Esqueceu a senha?</a></p>
+    </div>
+    <div class="buttons">
+      <ion-button type="submit" id="buttonone" (click)="signIn()">Entrar</ion-button>
+      <ion-button id="buttontwo" href="/register">Registrar</ion-button>
+    </div>
+    <p id="footerText">Ao se autenticar você declara concordar com nossos <a href="/privace">Termos de Política e Privacidade.</a></p>
+  </div>
+  
+</ion-content>
